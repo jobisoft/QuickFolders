@@ -1,18 +1,4 @@
 
-/* colorpicker replacement */
-input[type="color"] {
-	width: 40px;
-	padding-left: 4px;
-	padding-right: 4px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-}
-
-#QuickFolders-Panels menulist {
-	padding-top: 2px;
-	padding-bottom: 3px;
-}
-
 /* groupbox fix Tb 64+ */
 groupbox {
 	margin-bottom: 9px;

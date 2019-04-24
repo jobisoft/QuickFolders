@@ -193,23 +193,24 @@ QuickFolders.Options = {
   } ,
   
 	loadPreferences: function qf_loadPreferences() {
+		const util = QuickFolders.Util;
+		util.logDebug("loadPreferences - start:");
+		debugger;
 		let myprefs = document.getElementsByTagName("preference");
 		if (myprefs.length) {
-			let prefArray = [], sName, sType;
+			let prefArray = [];
 			for (let it of myprefs) {
-				// let it = myprefs.item(i);
-				// while(!it || !it.getAttribute('name')) util.logDebug("waiting for preference element attribute " + it.id);
-				sName = it.getAttribute('name');
-				sType = it.getAttribute('type');
 				let p = new Object({ id: it.id, 
-						      name: sName,
-						      type: sType });
+						      name: it.getAttribute('name'),
+						      type: it.getAttribute('type') });
 				if (it.getAttribute('instantApply') == "true") p.instantApply = true;
 				prefArray.push(p);
 			}
+			util.logDebug("Adding " + prefArray.length + " preferences to Preferences loader...")
 			if (Preferences)
 				Preferences.addAll(prefArray);
 		}
+		util.logDebug("loadPreferences - finished.");
 	} ,
 	
 	load: function load() {
@@ -218,7 +219,14 @@ QuickFolders.Options = {
 					QI = QuickFolders.Interface,
 					options = QuickFolders.Options,
 					licenser = util.Licenser;
+					
+		util.logDebug("QuickFolders.Options.load()");
 		
+		if (util.versionGreaterOrEqual(util.ApplicationVersion, "61")) {
+			options.loadPreferences();
+		}
+		
+		if (prefs.isDebugOption('options')) debugger;
     // version number must be copied over first!
 		if (window.arguments && window.arguments[1].inn.instance) {
 			// QuickFolders = window.arguments[1].inn.instance; // avoid creating a new QuickFolders instance, reuse the one passed in!!
@@ -363,6 +371,8 @@ QuickFolders.Options = {
 		options.configExtra2Button();
 		
 		util.loadPlatformStylesheet(window);
+		util.logDebug("QuickFolders.Options.load() - COMPLETE");
+		
 	},
   
   initBling: function initBling (tabbox) {
@@ -654,7 +664,7 @@ QuickFolders.Options = {
 		}
 
     trans.getTransferData("text/unicode", str, strLength);
-		// TGb 66 strLength doesn't have a value attribute
+		// Tb 66 strLength doesn't have a value attribute
     if (str && (strLength.value || str.value)) {
 			let pastetext = str.value.QueryInterface(Components.interfaces.nsISupportsString).data,
 					txtBox = document.getElementById('txtLicenseKey'),

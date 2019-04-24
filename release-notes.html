@@ -5,4 +5,6 @@
 <li> Replaced className logic with classList, where possible</li>
 <li> Removed deprecated getCharPref function: make remembering folder tabs preferences backwards compatible for older clients (Interlink) by using getComplexValue / getStringPref instead (getCharPref could lead to faulty characters when using extended character sets)</li>
 <li> Japanese locale completed - thanks to Masahiko Imanaka. </li>
+<li> Fixed: Message Navigation Buttons in Current Folder bar could not be hidden via options.</li>
+<li> Prepared code base for compatibility with Thunderbird 66 - this will be released as a separate version because it is currently impossible to release a version that is compatible with Thunderbird 60. </li>
 </ul>

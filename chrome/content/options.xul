@@ -4,8 +4,9 @@
 <!--  tb 59 -->
 <?xml-stylesheet href="chrome://messenger/skin/preferences/preferences.css" type="text/css" ?>
 <?xml-stylesheet href="chrome://quickfolders/skin/quickfolders-options.css" title="QuickFolderStyles" type="text/css"?>
-<!--  tb 64 -->
+<!--  tb 64 
 <?xml-stylesheet href="chrome://quickfolders/skin/quickfolders-widgets64.css" title="QuickFolderStyles" type="text/css"?>
+-->
 
 <!DOCTYPE prefwindow SYSTEM "chrome://quickfolders/locale/options.dtd" >
 
@@ -1162,40 +1163,12 @@
 						<spacer flex="1" />
 					</hbox>
 					<separator flex="1" />
-					<!--
-					<html:fieldset id="boxKeyGenerator" collapsed="true">
-					  <html:legend value="CREATE REGISTRATION KEY: REMOVE IN PRODUCTION - TRANSLATION UNNECESSARY!" />
-						<hbox>
-							<textbox id="txtEncrypt"
-											 class="licenseKey"
-											 flex="1" />
-							<button id="btnEncryptLicense"
-											label="Encrypt"
-											oncommand="options.encryptLicense();" />
-						</hbox>
-						<separator class="thin" />
-						<hbox align="center">
-							<button id="btnTestLicense"
-											label="Decrypt + Test"
-											oncommand="options.decryptLicense(true);" />
-							<button id="btnRestoreLicense"
-											label="Restore my own License"
-											oncommand="options.restoreLicense();" />
-							<spacer flex="1"/>
-							<button id="btnHideKeyGenerator"
-											label="Hide!"
-											oncommand="document.getElementById('boxKeyGenerator').collapsed=true;" />
-						</hbox>
-					</html:fieldset>
-					<separator flex="1" />
-					-->
+
 				</tabpanel>
 			</tabpanels>
 		</tabbox>
 		<separator class="thin" />
 	</prefpane>
 	<script type="application/javascript" src="chrome://global/content/preferencesBindings.js" />
-	<script>
-		options.loadPreferences(); /* Tb 66 compatibility. Should be called _before_ DOMcontent Loaded event */
-	</script>
+
 </dialog>
