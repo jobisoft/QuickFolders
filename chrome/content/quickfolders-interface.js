@@ -5702,7 +5702,8 @@ QuickFolders.Interface = {
 						// transfer color to font color picker for non-palette mode.
 						let cp = document.getElementById(colPickId);
 						if (cp && !disableColorChangeStriped) {
-							cp.color = selectedFontColor;
+							// cp.color = selectedFontColor;
+							cp.value = util.getSystemColor(selectedFontColor); // convert to hex value
 							prefs.setUserStyle(userStyleKey, "color", selectedFontColor);
 							options.styleUpdate(userStyleKey, 'color', selectedFontColor, previewTab);
 						}
@@ -5739,7 +5740,8 @@ QuickFolders.Interface = {
 								let cp = document.getElementById(colPickId);
 								if (cp && !disableColorChangeStriped) {
                   // don't do it with inactive tab in striped mode!!
-                  cp.color = rgb;
+                  // cp.color = rgb;
+									cp.value = util.getSystemColor(rgb);
                   prefs.setUserStyle(userStyleKey, "background-color", rgb);
 								}
                 resultBackgroundColor = rgb;
@@ -5755,8 +5757,10 @@ QuickFolders.Interface = {
 							options.toggleColorTranslucent(chkTransparent, 'inactive-colorpicker', 'inactivetabs-label', styleKey);
 						}
 						let cp = document.getElementById('inactive-colorpicker');
-						if (cp)
-						  cp.color = 'rgb(255,255,255)';
+						if (cp) {
+						  // cp.color = 'rgb(255,255,255)';
+							cp.value = '#FFFFFF';
+						}
 						prefs.setUserStyle(styleKey, "background-color", 'rgb(255,255,255)');
 						QI.updateMainWindow();
 					}

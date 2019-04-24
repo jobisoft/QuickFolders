@@ -1,4 +1,9 @@
 
+#QuickFolders-Panels menulist {
+	padding-top: 2px;
+	padding-bottom: 3px;
+}
+
 /* groupbox fix Tb 64+ */
 groupbox {
 	margin-bottom: 9px;
