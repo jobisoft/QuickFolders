@@ -648,7 +648,7 @@
 													type="color"
 													palettename="standard"
 													style="vertical-align:middle"
-													onchange="return options.styleUpdate('Toolbar', 'background-color', this.color, 'qf-StandardColors');" />
+													onchange="return options.styleUpdate('Toolbar', 'background-color', this.value, 'qf-StandardColors');" />
 							<checkbox label="&qf.checkbox.transparent;"
 												preference="QuickFolders-Preferences-TransparentToolbar"
 												oncommand="return options.toggleColorTranslucent(this, 'toolbar-colorpicker', 'qf-StandardColors', null);" />
@@ -701,7 +701,7 @@
 												<html:input id="inactive-fontcolorpicker"
 																		 type="color"
 																		 palettename="standard"
-																		 onchange="return options.styleUpdate('InactiveTab','color', this.color, 'inactivetabs-label');" />
+																		 onchange="return options.styleUpdate('InactiveTab','color', this.value, 'inactivetabs-label');" />
 												<html:input id="inactive-colorpicker"
 																		 type="color"
 																		 palettename="standard"
@@ -788,11 +788,11 @@
 												<html:input id="activetab-fontcolorpicker"
 																		 type="color"
 																		 palettename="vibrant"
-																		 onchange="return options.styleUpdate('ActiveTab','color', this.color, 'activetabs-label');" />
+																		 onchange="return options.styleUpdate('ActiveTab','color', this.value, 'activetabs-label');" />
 												<html:input id="activetab-colorpicker"
 																		 type="color"
 																		 palettename="standard"
-																		 onchange="return options.styleUpdate('ActiveTab','background-color', this.color, 'activetabs-label');" />
+																		 onchange="return options.styleUpdate('ActiveTab','background-color', this.value, 'activetabs-label');" />
 												<!-- instead of a checkbox, lets have a selection: no palette, like standard, vibrant, pastel"
 												This used to call options.toggleUsePalette(this,'active') from a checkbox
 												-->
@@ -827,11 +827,11 @@
 												<html:input id="hover-fontcolorpicker"
 																		 type="color"
 																		 palettename="standard"
-																		 onchange="return options.styleUpdate('HoveredTab','color', this.color, 'hoveredtabs-label');" />
+																		 onchange="return options.styleUpdate('HoveredTab','color', this.value, 'hoveredtabs-label');" />
 												<html:input id="hover-colorpicker"
 																		 type="color"
 																		 palettename="standard"
-																		 onchange="return options.styleUpdate('HoveredTab','background-color', this.color, 'hoveredtabs-label');" />
+																		 onchange="return options.styleUpdate('HoveredTab','background-color', this.value, 'hoveredtabs-label');" />
 												<menulist id="menuHoverPalette"
 																	sizetopopup="none"
 																	preference="QuickFolders-Preferences-HoveredTab-PaletteType"
@@ -862,11 +862,11 @@
 												<html:input id="dragover-fontcolorpicker"
 																		 palettename="standard"
 																		 type="color"
-																		 onchange="return options.styleUpdate('DragTab', 'color', this.color, 'dragovertabs-label');" />
+																		 onchange="return options.styleUpdate('DragTab', 'color', this.value, 'dragovertabs-label');" />
 												<html:input id="dragover-colorpicker"
 																		 type="color"
 																		 palettename="standard"
-																		 onchange="return options.styleUpdate('DragTab', 'background-color', this.color, 'dragovertabs-label');" />
+																		 onchange="return options.styleUpdate('DragTab', 'background-color', this.value, 'dragovertabs-label');" />
 												<menulist id="menuDragOverPalette"
 																	sizetopopup="none"
 																	preference="QuickFolders-Preferences-DragOver-PaletteType"
