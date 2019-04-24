@@ -41,108 +41,6 @@
 	</script>
 	
 	<prefpane id="qf-options-prefpane" orient="vertical">
-	
-		<preferences id="prefsGeneral">
-			<preference id="QuickFolders-Preferences-ShowUnread" name="extensions.quickfolders.showUnreadOnButtons" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowUnreadFoldersBold" name="extensions.quickfolders.showUnreadFoldersBold" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowNewMail" name="extensions.quickfolders.showNewMailHighlight" type="bool" />
-			<preference id="QuickFolders-Preferences-ShowRecentTab" name="extensions.quickfolders.showRecentTab" type="bool" />
-			<preference id="QuickFolders-Preferences-ShowQuickMove" name="extensions.quickfolders.showQuickMove" type="bool" />
-			<preference id="QuickFolders-Preferences-ShowBookmarks" name="extensions.quickfolders.bookmarks.showButton" type="bool" />
-			<preference id="QuickFolders-Preferences-ShowToolbarMenuIcon" name="extensions.quickfolders.showToolIcon" type="bool" />
-			<preference id="QuickFolders-Preferences-UseKeyboardShortcuts" name="extensions.quickfolders.useKeyboardShortcuts" type="bool" />
-			<preference id="QuickFolders-Preferences-UseKeyboardShortcutCTRL" name="extensions.quickfolders.useKeyboardShortcutCTRL" type="bool" />
-			<preference id="QuickFolders-Preferences-ShowShortcutNumber" name="extensions.quickfolders.showShortcutNumber" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowTotalNumber" name="extensions.quickfolders.showTotalNumber" type="bool" />
-			<preference id="QuickFolders-Preferences-ShowCountInSubFolders" name="extensions.quickfolders.showCountInSubFolders" type="bool" />
-			<preference id="QuickFolders-Preferences-ShowFoldersWithMessagesItalic" name="extensions.quickfolders.showFoldersWithMessagesItalic" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowFoldersWithNewMailItalic" name="extensions.quickfolders.showFoldersWithNewMailItalic" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-HideToolbarWhenNotNeeded" name="extensions.quickfolders.toolbar.onlyShowInMailWindows" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-FocusPreview" name="extensions.quickfolders.autoFocusPreview" type="bool" />
-			<preference id="QuickFolders-Preferences-Debug" name="extensions.quickfolders.debug" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-init-delay" name="extensions.quickfolders.initDelay" type="int" />
-			<preference id="QuickFolders-Preferences-ShowSubFolders" name="extensions.quickfolders.showSubfolders" type="bool" />
-			<preference id="QuickFolders-Preferences-EnableMenuSorting" name="extensions.quickfolders.enableMenuAlphaSorting" type="bool" />
-			<preference id="Thunderbird-Preference-FolderCrossing" name="mailnews.nav_crosses_folders" type="int" />
-			<preference id="QuickFolders-Preferences-RebuildShortcut" name="extensions.quickfolders.useRebuildShortcut" type="bool" />
-			<preference id="QuickFolders-Preferences-RebuildShortcutKey" name="extensions.quickfolders.rebuildShortcutKey" type="string" />
-			<preference id="QuickFolders-Preferences-QuickJumpShortcut" name="extensions.quickfolders.quickJump.useHotkey" type="bool"   instantApply="true"/>
-			<preference id="QuickFolders-Preferences-QuickJumpShortcutKey" name="extensions.quickfolders.quickJump.Hotkey" type="string" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-QuickMoveShortcut" name="extensions.quickfolders.quickMove.useHotkey" type="bool"   instantApply="true"/>
-			<preference id="QuickFolders-Preferences-QuickMoveShortcutKey" name="extensions.quickfolders.quickMove.Hotkey" type="string" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-QuickCopyShortcut" name="extensions.quickfolders.quickCopy.useHotkey" type="bool"   instantApply="true"/>
-			<preference id="QuickFolders-Preferences-QuickCopyShortcutKey" name="extensions.quickfolders.quickCopy.Hotkey" type="string" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-QuickMoveAutoFill" name="extensions.quickfolders.quickMove.autoFill" type="bool" />
-			<preference id="QuickFolders-Preferences-skipFolderShortcut" name="extensions.quickfolders.skipFolder.useHotkey" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-skipFolderShortcutKey" name="extensions.quickfolders.skipFolder.Hotkey" type="string" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-QuickMove-PathType" name="extensions.quickfolders.premium.findFolder.folderPathDetail" type="int" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-QuickMove-PathDepth" name="extensions.quickfolders.premium.findFolder.maxPathItems" type="int" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-NavigateShortcut" name="extensions.quickfolders.useNavigateShortcuts" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-MultiCategory" name="extensions.quickfolders.premium.categories.multiSelect" type="bool" />
-		</preferences>
-
-		<preferences id="prefsAdvanced">
-			<preference id="QuickFolders-Preferences-ShowCurrentFolderBar"               name="extensions.quickfolders.showCurrentFolderToolbar" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowCurrentFolderBar-SingleMessage" name="extensions.quickfolders.showCurrentFolderToolbar.messageWindow" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowCurrentFolderBar-MsgTab"        name="extensions.quickfolders.showCurrentFolderToolbar.singleMailTab" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowCloseButton" name="extensions.quickfolders.currentFolderBar.showClose" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowRecentButton" name="extensions.quickfolders.currentFolderBar.showRecentButton" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowFilterButton" name="extensions.quickfolders.currentFolderBar.showFilterButton" type="bool"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowFolderMenuButton" name="extensions.quickfolders.currentFolderBar.showFolderMenuButton" type="bool" instantApply="true" />
-			<preference id="QuickFolders-Preferences-ShowRepairFolderButton" name="extensions.quickfolders.currentFolderBar.showRepairFolderButton" type="bool"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowMsgNavButton" name="extensions.quickfolders.currentFolderBar.navigation.showButtons" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowFolderNavButton" name="extensions.quickfolders.currentFolderBar.folderNavigation.showButtons" type="bool"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowIconButtons" name="extensions.quickfolders.currentFolderBar.showIconButtons" type="bool"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-CurrentFolder-Background" name="extensions.quickfolders.currentFolderBar.background" type="string"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-FolderMenu-openNewTab" name="extensions.quickfolders.folderMenu.openNewTab" type="bool" />
-			<preference id="QuickFolders-Preferences-FolderMenu-getMailForInbox" name="extensions.quickfolders.folderMenu.getMessagesForInbox" type="bool" />
-			<preference id="QuickFolders-Preferences-FolderMenu-getMailForNews" name="extensions.quickfolders.folderMenu.getMessagesForNews" type="bool" />
-			<preference id="QuickFolders-Preferences-FolderMenu-markAllRead" name="extensions.quickfolders.folderMenu.markAllRead" type="bool" />
-			<preference id="QuickFolders-Preferences-FolderMenu-emptyJunk" name="extensions.quickfolders.folderMenu.emptyJunk" type="bool" />
-			<preference id="QuickFolders-Preferences-FolderMenu-emptyTrash" name="extensions.quickfolders.folderMenu.emptyTrash" type="bool" />
-			<preference id="QuickFolders-Preferences-FolderMenu-newFolder" name="extensions.quickfolders.folderMenu.dragToNew" type="bool" />
-			<preference id="QuickFolders-Preferences-CommandMenu-Icons" name="extensions.quickfolders.commandMenu.icon" type="bool" />
-			<preference id="QuickFolders-Preferences-CommandMenu-CTRL" name="extensions.quickfolders.commandMenu.CTRL" type="bool" />
-			<preference id="QuickFolders-Preferences-CommandMenu-Separator" name="extensions.quickfolders.commandMenu.separator" type="bool" />
-			<preference id="QuickFolders-Preferences-CommandMenu-LineBreak" name="extensions.quickfolders.commandMenu.lineBreak" type="bool" />
-			<preference id="QuickFolders-Preferences-CommandMenu-Support" name="extensions.quickfolders.commandMenu.support" type="bool" />
-			<preference id="QuickFolders-Preferences-CommandMenu-Help" name="extensions.quickfolders.commandMenu.help" type="bool" />
-			<preference id="QuickFolders-Preferences-CommandMenu-Options" name="extensions.quickfolders.commandMenu.options" type="bool" />
-			<preference id="QuickFolders-Preferences-ShowQuickFoldersLabel" name="extensions.quickfolders.showQuickfoldersLabel" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-CollapseCategory" name="extensions.quickfolders.collapseCategories" type="bool" />
-			<preference id="QuickFolders-Preferences-Transitions" name="extensions.quickfolders.style.transitions" type="bool" instantApply="true" />
-		</preferences>
-
-		<preferences id="prefsLayout">
-			<preference id="QuickFolders-Preferences-CustomizedRadius" name="extensions.quickfolders.style.corners.customizedRadius" type="bool" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-TopRadius" name="extensions.quickfolders.style.corners.customizedTopRadiusN" type="int" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-BottomRadius" name="extensions.quickfolders.style.corners.customizedBottomRadiusN" type="int" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ButtonMinimalHeight" name="extensions.quickfolders.style.button.minHeight" type="int" />
-			<preference id="QuickFolders-Preferences-ButtonTopPadding" name="extensions.quickfolders.style.button.paddingTop" type="int" />
-			<preference id="QuickFolders-Preferences-Theme" name="extensions.quickfolders.style.theme" type="string" instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowIcons" name="extensions.quickfolders.showIcons" type="bool" />
-			<preference id="QuickFolders-Preferences-ButtonFontSize" name="extensions.quickfolders.buttonFontSizeN" type="int"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ToolbarBottom" name="extensions.quickfolders.style.Toolbar.bottomLineWidth" type="int"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ToolbarMinimalHeight" name="extensions.quickfolders.toolbar.minHeight" type="string"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-TransparentButtons" name="extensions.quickfolders.transparentButtons" type="bool"   instantApply="true"/>
-			<preference id="QuickFolders-Preferences-ShowBorders" name="extensions.quickfolders.style.borders" type="bool"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-TransparentToolbar" name="extensions.quickfolders.transparentToolbar" type="bool"  instantApply="true"/>
-			<preference id="QuickFolders-Preferences-Shadows" name="extensions.quickfolders.buttonShadows" type="bool" />
-			<preference id="QuickFolders-Preferences-ColorTabStyleId" name="extensions.quickfolders.colorTabStyle" type="int"  instantApply="true"/>
-			<!-- "uncolored" tabs (inactive)	0, 1, n -->
-			<preference id="QuickFolders-Preferences-InactiveTab-PaletteType" name="extensions.quickfolders.style.InactiveTab.paletteType" type="int" />
-			<!-- "colored" tabs (inactive)		1, n		-->
-			<preference id="QuickFolders-Preferences-ColoredTab-PaletteType" name="extensions.quickfolders.style.ColoredTab.paletteType" type="int" />
-			<preference id="QuickFolders-Preferences-ActiveTab-PaletteType" name="extensions.quickfolders.style.ActiveTab.paletteType" type="int" />
-			<preference id="QuickFolders-Preferences-DragOver-PaletteType" name="extensions.quickfolders.style.DragOver.paletteType" type="int" />
-			<preference id="QuickFolders-Preferences-HoveredTab-PaletteType" name="extensions.quickfolders.style.HoveredTab.paletteType" type="int" />
-		</preferences>
-	
-		<script type="application/javascript" src="chrome://global/content/preferencesBindings.js" />
-		<script>
-			options.loadPreferences(); /* Tb 66 compatibility. Should be called _before_ DOMcontent Loaded event */
-		</script>
-	
 		<box id="qf-header-container">
 			<vbox>
 				<spacer flex="1" />
@@ -183,6 +81,44 @@
 			</tabs>
 			<tabpanels id="QuickFolders-Panels"  onselect="options.onTabSelect(this,event);">
 				<tabpanel id="QuickFolders-Options-general" orient="vertical">
+					<preferences id="prefsGeneral">
+						<preference id="QuickFolders-Preferences-ShowUnread" name="extensions.quickfolders.showUnreadOnButtons" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowUnreadFoldersBold" name="extensions.quickfolders.showUnreadFoldersBold" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowNewMail" name="extensions.quickfolders.showNewMailHighlight" type="bool" />
+						<preference id="QuickFolders-Preferences-ShowRecentTab" name="extensions.quickfolders.showRecentTab" type="bool" />
+						<preference id="QuickFolders-Preferences-ShowQuickMove" name="extensions.quickfolders.showQuickMove" type="bool" />
+						<preference id="QuickFolders-Preferences-ShowBookmarks" name="extensions.quickfolders.bookmarks.showButton" type="bool" />
+						<preference id="QuickFolders-Preferences-ShowToolbarMenuIcon" name="extensions.quickfolders.showToolIcon" type="bool" />
+						<preference id="QuickFolders-Preferences-UseKeyboardShortcuts" name="extensions.quickfolders.useKeyboardShortcuts" type="bool" />
+						<preference id="QuickFolders-Preferences-UseKeyboardShortcutCTRL" name="extensions.quickfolders.useKeyboardShortcutCTRL" type="bool" />
+						<preference id="QuickFolders-Preferences-ShowShortcutNumber" name="extensions.quickfolders.showShortcutNumber" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowTotalNumber" name="extensions.quickfolders.showTotalNumber" type="bool" />
+						<preference id="QuickFolders-Preferences-ShowCountInSubFolders" name="extensions.quickfolders.showCountInSubFolders" type="bool" />
+						<preference id="QuickFolders-Preferences-ShowFoldersWithMessagesItalic" name="extensions.quickfolders.showFoldersWithMessagesItalic" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowFoldersWithNewMailItalic" name="extensions.quickfolders.showFoldersWithNewMailItalic" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-HideToolbarWhenNotNeeded" name="extensions.quickfolders.toolbar.onlyShowInMailWindows" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-FocusPreview" name="extensions.quickfolders.autoFocusPreview" type="bool" />
+						<preference id="QuickFolders-Preferences-Debug" name="extensions.quickfolders.debug" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-init-delay" name="extensions.quickfolders.initDelay" type="int" />
+						<preference id="QuickFolders-Preferences-ShowSubFolders" name="extensions.quickfolders.showSubfolders" type="bool" />
+						<preference id="QuickFolders-Preferences-EnableMenuSorting" name="extensions.quickfolders.enableMenuAlphaSorting" type="bool" />
+						<preference id="Thunderbird-Preference-FolderCrossing" name="mailnews.nav_crosses_folders" type="int" />
+						<preference id="QuickFolders-Preferences-RebuildShortcut" name="extensions.quickfolders.useRebuildShortcut" type="bool" />
+						<preference id="QuickFolders-Preferences-RebuildShortcutKey" name="extensions.quickfolders.rebuildShortcutKey" type="string" />
+						<preference id="QuickFolders-Preferences-QuickJumpShortcut" name="extensions.quickfolders.quickJump.useHotkey" type="bool"   instantApply="true"/>
+						<preference id="QuickFolders-Preferences-QuickJumpShortcutKey" name="extensions.quickfolders.quickJump.Hotkey" type="string" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-QuickMoveShortcut" name="extensions.quickfolders.quickMove.useHotkey" type="bool"   instantApply="true"/>
+						<preference id="QuickFolders-Preferences-QuickMoveShortcutKey" name="extensions.quickfolders.quickMove.Hotkey" type="string" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-QuickCopyShortcut" name="extensions.quickfolders.quickCopy.useHotkey" type="bool"   instantApply="true"/>
+						<preference id="QuickFolders-Preferences-QuickCopyShortcutKey" name="extensions.quickfolders.quickCopy.Hotkey" type="string" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-QuickMoveAutoFill" name="extensions.quickfolders.quickMove.autoFill" type="bool" />
+						<preference id="QuickFolders-Preferences-skipFolderShortcut" name="extensions.quickfolders.skipFolder.useHotkey" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-skipFolderShortcutKey" name="extensions.quickfolders.skipFolder.Hotkey" type="string" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-QuickMove-PathType" name="extensions.quickfolders.premium.findFolder.folderPathDetail" type="int" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-QuickMove-PathDepth" name="extensions.quickfolders.premium.findFolder.maxPathItems" type="int" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-NavigateShortcut" name="extensions.quickfolders.useNavigateShortcuts" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-MultiCategory" name="extensions.quickfolders.premium.categories.multiSelect" type="bool" />
+					</preferences>
 
 					<html:fieldset orient="horizontal">
 						<html:legend>&qf.label.keyboard;</html:legend>
@@ -330,6 +266,37 @@
 				</tabpanel>
 
 				<tabpanel id="QuickFolders-Options-advanced" orient="vertical">
+					<preferences id="prefsAdvanced">
+						<preference id="QuickFolders-Preferences-ShowCurrentFolderBar"               name="extensions.quickfolders.showCurrentFolderToolbar" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowCurrentFolderBar-SingleMessage" name="extensions.quickfolders.showCurrentFolderToolbar.messageWindow" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowCurrentFolderBar-MsgTab"        name="extensions.quickfolders.showCurrentFolderToolbar.singleMailTab" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowCloseButton" name="extensions.quickfolders.currentFolderBar.showClose" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowRecentButton" name="extensions.quickfolders.currentFolderBar.showRecentButton" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowFilterButton" name="extensions.quickfolders.currentFolderBar.showFilterButton" type="bool"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowFolderMenuButton" name="extensions.quickfolders.currentFolderBar.showFolderMenuButton" type="bool" instantApply="true" />
+						<preference id="QuickFolders-Preferences-ShowRepairFolderButton" name="extensions.quickfolders.currentFolderBar.showRepairFolderButton" type="bool"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowMsgNavButton" name="extensions.quickfolders.currentFolderBar.navigation.showButtons" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowFolderNavButton" name="extensions.quickfolders.currentFolderBar.folderNavigation.showButtons" type="bool"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowIconButtons" name="extensions.quickfolders.currentFolderBar.showIconButtons" type="bool"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-CurrentFolder-Background" name="extensions.quickfolders.currentFolderBar.background" type="string"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-FolderMenu-openNewTab" name="extensions.quickfolders.folderMenu.openNewTab" type="bool" />
+						<preference id="QuickFolders-Preferences-FolderMenu-getMailForInbox" name="extensions.quickfolders.folderMenu.getMessagesForInbox" type="bool" />
+						<preference id="QuickFolders-Preferences-FolderMenu-getMailForNews" name="extensions.quickfolders.folderMenu.getMessagesForNews" type="bool" />
+						<preference id="QuickFolders-Preferences-FolderMenu-markAllRead" name="extensions.quickfolders.folderMenu.markAllRead" type="bool" />
+						<preference id="QuickFolders-Preferences-FolderMenu-emptyJunk" name="extensions.quickfolders.folderMenu.emptyJunk" type="bool" />
+						<preference id="QuickFolders-Preferences-FolderMenu-emptyTrash" name="extensions.quickfolders.folderMenu.emptyTrash" type="bool" />
+						<preference id="QuickFolders-Preferences-FolderMenu-newFolder" name="extensions.quickfolders.folderMenu.dragToNew" type="bool" />
+						<preference id="QuickFolders-Preferences-CommandMenu-Icons" name="extensions.quickfolders.commandMenu.icon" type="bool" />
+						<preference id="QuickFolders-Preferences-CommandMenu-CTRL" name="extensions.quickfolders.commandMenu.CTRL" type="bool" />
+						<preference id="QuickFolders-Preferences-CommandMenu-Separator" name="extensions.quickfolders.commandMenu.separator" type="bool" />
+						<preference id="QuickFolders-Preferences-CommandMenu-LineBreak" name="extensions.quickfolders.commandMenu.lineBreak" type="bool" />
+						<preference id="QuickFolders-Preferences-CommandMenu-Support" name="extensions.quickfolders.commandMenu.support" type="bool" />
+						<preference id="QuickFolders-Preferences-CommandMenu-Help" name="extensions.quickfolders.commandMenu.help" type="bool" />
+						<preference id="QuickFolders-Preferences-CommandMenu-Options" name="extensions.quickfolders.commandMenu.options" type="bool" />
+						<preference id="QuickFolders-Preferences-ShowQuickFoldersLabel" name="extensions.quickfolders.showQuickfoldersLabel" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-CollapseCategory" name="extensions.quickfolders.collapseCategories" type="bool" />
+						<preference id="QuickFolders-Preferences-Transitions" name="extensions.quickfolders.style.transitions" type="bool" instantApply="true" />
+					</preferences>
 
 					<hbox id="advancedConfig">
 						<html:fieldset>
@@ -521,6 +488,30 @@
 				</tabpanel>
 
 				<tabpanel id="QuickFolders-Options-layout" orient="vertical" >
+					<preferences id="prefsLayout">
+						<preference id="QuickFolders-Preferences-CustomizedRadius" name="extensions.quickfolders.style.corners.customizedRadius" type="bool" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-TopRadius" name="extensions.quickfolders.style.corners.customizedTopRadiusN" type="int" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-BottomRadius" name="extensions.quickfolders.style.corners.customizedBottomRadiusN" type="int" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ButtonMinimalHeight" name="extensions.quickfolders.style.button.minHeight" type="int" />
+						<preference id="QuickFolders-Preferences-ButtonTopPadding" name="extensions.quickfolders.style.button.paddingTop" type="int" />
+						<preference id="QuickFolders-Preferences-Theme" name="extensions.quickfolders.style.theme" type="string" instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowIcons" name="extensions.quickfolders.showIcons" type="bool" />
+						<preference id="QuickFolders-Preferences-ButtonFontSize" name="extensions.quickfolders.buttonFontSizeN" type="int"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ToolbarBottom" name="extensions.quickfolders.style.Toolbar.bottomLineWidth" type="int"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ToolbarMinimalHeight" name="extensions.quickfolders.toolbar.minHeight" type="string"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-TransparentButtons" name="extensions.quickfolders.transparentButtons" type="bool"   instantApply="true"/>
+						<preference id="QuickFolders-Preferences-ShowBorders" name="extensions.quickfolders.style.borders" type="bool"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-TransparentToolbar" name="extensions.quickfolders.transparentToolbar" type="bool"  instantApply="true"/>
+						<preference id="QuickFolders-Preferences-Shadows" name="extensions.quickfolders.buttonShadows" type="bool" />
+						<preference id="QuickFolders-Preferences-ColorTabStyleId" name="extensions.quickfolders.colorTabStyle" type="int"  instantApply="true"/>
+						<!-- "uncolored" tabs (inactive)	0, 1, n -->
+						<preference id="QuickFolders-Preferences-InactiveTab-PaletteType" name="extensions.quickfolders.style.InactiveTab.paletteType" type="int" />
+						<!-- "colored" tabs (inactive)		1, n		-->
+						<preference id="QuickFolders-Preferences-ColoredTab-PaletteType" name="extensions.quickfolders.style.ColoredTab.paletteType" type="int" />
+						<preference id="QuickFolders-Preferences-ActiveTab-PaletteType" name="extensions.quickfolders.style.ActiveTab.paletteType" type="int" />
+						<preference id="QuickFolders-Preferences-DragOver-PaletteType" name="extensions.quickfolders.style.DragOver.paletteType" type="int" />
+						<preference id="QuickFolders-Preferences-HoveredTab-PaletteType" name="extensions.quickfolders.style.HoveredTab.paletteType" type="int" />
+					</preferences>
 
 					<html:fieldset>
 						<html:legend>&qf.label.appearance;</html:legend>
@@ -1203,4 +1194,8 @@
 		</tabbox>
 		<separator class="thin" />
 	</prefpane>
+	<script type="application/javascript" src="chrome://global/content/preferencesBindings.js" />
+	<script>
+		options.loadPreferences(); /* Tb 66 compatibility. Should be called _before_ DOMcontent Loaded event */
+	</script>
 </dialog>

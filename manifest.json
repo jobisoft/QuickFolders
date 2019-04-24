@@ -4,7 +4,7 @@
   "name": "QuickFolders",
 	"description": "Bookmark your favorite mail folders in Thunderbird.",
   "legacy": true,
-  "version": "4.15pre56",
+  "version": "4.15pre57",
   "developer": {
 	  "name": "Axel Grude",
     "url": "http://quickfilters.mozdev.org/index.html"
