@@ -78,6 +78,9 @@
 <!ENTITY qf.label.menus.options "Optionen">
 <!ENTITY qf.caption.currentFolderBackground "Hintergrund Aktiv-Verzeichnis">
 <!ENTITY qf.button.currentFolderBackground.set "aktualisieren">
+<!ENTITY qf.checkbox.currentfolder.lightweight "Mit lightweight Theme integrieren">
+<!ENTITY qf.currentfolder.leftSpacer "Abstand links:">
+<!ENTITY qf.currentfolder.rightSpacer "Abstand rechts:">
 <!ENTITY qf.currentFolderBackground.default "standard">
 <!ENTITY qf.currentFolderBackground.dark "dunkel">
 <!ENTITY qf.currentFolderBackground.translucent "Milchglas">
@@ -178,6 +181,12 @@
 <!ENTITY qf.checkbox.quickmove.autofill.tip "Das zuletzt angesprungene Verzeichnis wird eingefügt. Drücken Sie [Return] zum bestätigen, oder überschreiben Sie ihn für andere Zielverzeichnisse.">
 <!ENTITY qf.checkbox.skipFolder "Ungelesene Mails Überspringen mit UMSCHALT +">
 <!ENTITY qf.checkbox.skipFolder.tip "Schnelltaste um in den nächsten ungelesenen Ordner springen.">
+<!ENTITY qf.backupAndRestore "Datensicherung / Wiederherstellen">
+<!ENTITY qf.storeConfig "Konfiguration speichern…">
+<!ENTITY qf.loadConfig "Konfiguration laden…">
+<!ENTITY qf.checkbox.storeConfig.tabs "QuickFolders Tabs mit einschließen">
+<!ENTITY qf.checkbox.storeConfig.general "Allgemeine Einstellungen mit einschließen">
+<!ENTITY qf.checkbox.storeConfig.layout "Layout und erweitert mit einschließen">
 <!ENTITY qf.quickMove.path.format "Anzeigeformat:">
 <!ENTITY qf.pathFormat.folderName "Verzeichnisname">
 <!ENTITY qf.pathFormat.folderAndAccount "Verzeichnisname - Konto">

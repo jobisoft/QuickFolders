@@ -51,7 +51,7 @@ QuickFolders.FilterWorker = {
 					notificationId = 'pbSearchThresholdNotifcationBar';  // msgNotificationBar
 					break;
 				case 'Thunderbird': 
-					notificationId = 'mail-notification-box'
+					notificationId = 'mail-notification-box';
 					break;
 				case 'SeaMonkey':
 					notificationId = null;
@@ -61,7 +61,11 @@ QuickFolders.FilterWorker = {
 			let notificationKey = "quickfolders-filter";
 
 			if (notificationId) {
-				notifyBox = document.getElementById (notificationId);
+			  if (typeof specialTabs == 'object' && specialTabs.msgNotificationBar) { // Tb 68
+					notifyBox = specialTabs.msgNotificationBar;
+				}
+			  else
+					notifyBox = document.getElementById (notificationId);
 				let item=notifyBox.getNotificationWithValue(notificationKey)
 				if(item)
 					notifyBox.removeNotification(item, (util.Application == 'Postbox')); // second parameter in Postbox(not documented): skipAnimation
@@ -342,15 +346,16 @@ QuickFolders.FilterWorker = {
       }
     }
 		
-		if (!sourceFolder.server.canHaveFilters) {
-      if (sourceFolder.server) {
-      	let serverName = sourceFolder.server.name || "unknown";
-			util.slideAlert("QuickFolders", "This account (" + serverName + ") cannot have filters");
-      }
-      else {
-        if (sourceFolder.prettyName) {
-          util.slideAlert("QuickFolders", "Folder (" + sourceFolder.prettyName + ") does not have a server.");
-        }
+		if (sourceFolder.server) {
+			if (!sourceFolder.server.canHaveFilters) {
+				let serverName = sourceFolder.server.name || "unknown";
+				util.slideAlert("QuickFolders", "This account (" + serverName + ") cannot have filters");
+				return false;
+			}
+		}
+		else {
+			if (sourceFolder.prettyName) {
+        util.slideAlert("QuickFolders", "Folder (" + sourceFolder.prettyName + ") does not have a server.");
       }
 			return false;
 		}
@@ -663,7 +668,7 @@ QuickFolders.FilterWorker = {
         util = QuickFolders.Util;
 		element.value = this.getCurrentFilterTemplate();
     try {
-      let loc = QuickFolders.Preferences.service.getCharPref("general.useragent.locale");
+      let loc = QuickFolders.Preferences.service.getStringPref("general.useragent.locale");
       if (loc) {
         util.logDebug('Locale found: ' + loc);
         if (loc.indexOf('en')!=0) {

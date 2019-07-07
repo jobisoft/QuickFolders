@@ -3,22 +3,21 @@
   "manifest_version": 2,
   "name": "QuickFolders",
 	"description": "Bookmark your favorite mail folders in Thunderbird.",
-  "legacy": true,
-  "version": "4.15pre63",
+  "version": "4.15.4",
   "developer": {
 	  "name": "Axel Grude",
-    "url": "http://quickfilters.mozdev.org/index.html"
+    "url": "http://quickfolders.org/index.html"
 	},
   "applications": {
     "gecko": {
       "id": "quickfolders@curious.be",
-      "strict_min_version": "64.0",
-			"strict_max_version": "67.*"
+      "strict_min_version": "60.0"
     }
   },
   "icons": {
+	  "16": "chrome/skin/ico/QF16x16.png",
     "32": "chrome/skin/ico/quickfolders-Icon.png",
-    "64": "chrome/skin/ico/QF64x64.pn"
+    "64": "chrome/skin/ico/QF64x64.png"
   },
 	
   "legacy": {

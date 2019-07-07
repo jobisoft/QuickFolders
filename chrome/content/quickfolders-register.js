@@ -11,7 +11,7 @@
 if (typeof ChromeUtils.import == "undefined")
 	Components.utils.import('resource://gre/modules/Services.jsm'); // Thunderbird 52
 else
-	ChromeUtils.import('resource://gre/modules/Services.jsm');
+	var { Services } = ChromeUtils.import('resource://gre/modules/Services.jsm');
 
 QuickFolders.Crypto = {
   get key_type() {
@@ -147,7 +147,7 @@ QuickFolders.Licenser = {
           util.logToConsole('Omitting account ' + id.fullName + ' - no mail address');
           return;
         }
-        let menuitem = document.createElement('menuitem');
+        let menuitem = document.createXULElement ? document.createXULElement('menuitem') : document.createElement('menuitem');
 				menuitem.setAttribute("id", "id" + dropdownCount++);
 				// this.setEventAttribute(menuitem, "oncommand","QuickFolders.Interface.onGetMessages(this);");
 				menuitem.setAttribute("fullName", id.fullName);

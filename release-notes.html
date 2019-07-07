@@ -1,10 +1,20 @@
-<b>Version 4.14.1</b>
+<b>Version 4.15.4</b>
 <ul>
-<li> <a name="26654" href="https://www.mozdev.org/bugs/show_bug.cgi?id=26654" target="_blank">[Bug 26654]</a> quickMove shortcuts triggered during in-mail search</li>
-<li> quickMove: Improve remembering all entered parent folders when only a single match is found.</li>
-<li> Replaced className logic with classList, where possible</li>
-<li> Removed deprecated getCharPref function: make remembering folder tabs preferences backwards compatible for older clients (Interlink) by using getComplexValue / getStringPref instead (getCharPref could lead to faulty characters when using extended character sets)</li>
-<li> Japanese locale completed - thanks to Masahiko Imanaka. </li>
-<li> Fixed: Message Navigation Buttons in Current Folder bar could not be hidden via options.</li>
-<li> Prepared code base for compatibility with Thunderbird 66 - this will be released as a separate version because it is currently impossible to release a version that is compatible with Thunderbird 60. </li>
+<li> Fixed <a name="26680" href="https://www.mozdev.org/bugs/show_bug.cgi?id=26680" target="_blank">[Bug 26680]</a>
+quickMove / quickJump: Create subfolder command with "/" stopped working. 
+
+When entering a folder name followed by a forward slash [/] the expected behavior is to not only show suggestions for matching subfolders but also a suggestion to create a new subfolder based on the characters entered after the slash:
+
+https://i.imgur.com/yeIO9mM.png
+<img src="https://i.imgur.com/yeIO9mM.png" alt="create new subfolder" class="screenshots"/>
+</li>
 </ul>
+
+<b>Thunderbird 68 Fixes</b>
+<ul>
+<li> Fixed broken functionality of dialog buttons (Cancel, Ok didn't close dialog). </li>
+<li> Remember last opened panel in options dialog. </li>
+<li> Fixed syntax for module import (Services.jsm, PluralForm). </li>
+<li> Fixed broken notification panels. </li>
+</ul>
+

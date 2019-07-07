@@ -10,7 +10,7 @@
 if (typeof ChromeUtils.import == "undefined")
 	Components.utils.import('resource://gre/modules/Services.jsm'); // Thunderbird 52
 else
-	ChromeUtils.import('resource://gre/modules/Services.jsm');
+	var { Services } = ChromeUtils.import('resource://gre/modules/Services.jsm');
 
 var QuickFolders_ConsoleService=null;
 
@@ -23,16 +23,6 @@ if (!QuickFolders.Properties)
 
 if (!QuickFolders.Filter)
 	QuickFolders.Filter = {};
-
-if (Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULAppInfo).ID != "postbox@postbox-inc.com")
-{
-  // Here, Postbox declares fixIterator
-	if (typeof ChromeUtils.import == "undefined")
-		Components.utils.import('resource:///modules/iteratorUtils.jsm'); 
-	else
-		ChromeUtils.import('resource:///modules/iteratorUtils.jsm');
-}
-
 	
 // code moved from options.js
 // open the new content tab for displaying support info, see
@@ -71,12 +61,41 @@ var QuickFolders_TabURIopener = {
 	}
 };
 
+
+try {
+	// override version number - retrieves QUICKFOLDERS_HC_VERSION
+	Components.utils.import("resource://quickfoldersShim60/quickfolders-util2.jsm"); 
+}
+catch (ex) {
+	let msg = "couldn't import quickfolders-util2.jsm";
+	debugger;
+	try {
+		var Ci1 = Components.interfaces,
+		    Cc2 = Components.classes;
+		let consoleService = Cc2["@mozilla.org/consoleservice;1"].getService(Ci1.nsIConsoleService),
+				scriptError = Cc2["@mozilla.org/scripterror;1"].createInstance(Ci1.nsIScriptError),
+				Category = 'system javascript',
+		    stack = '';
+		if (typeof ex.stack!='undefined')
+			stack = ex.stack.replace("@","\n  ");
+
+		scriptError.init(msg, ex.fileName || "?", stack, ex.lineNumber, 0, 0x2, Category);
+		if (this.Application == 'Postbox') {
+			this.logToConsole(scriptError, 'EXCEPTION');
+		}
+		consoleService.logMessage(scriptError);
+	}
+	catch(ex) { 
+	  debugger;
+	}
+}
+
 //if (!QuickFolders.Util)
 QuickFolders.Util = {
   _isCSSGradients: -1,
 	_isCSSRadius: -1,
 	_isCSSShadow: true,
-	HARDCODED_CURRENTVERSION : "4.14.1",
+	HARDCODED_CURRENTVERSION : QUICKFOLDERS_HC_VERSION || "4.15", // will later be overriden call to AddonManager
 	HARDCODED_EXTENSION_TOKEN : ".hc",
 	ADDON_ID: "quickfolders@curious.be",
 	FolderFlags : {  // nsMsgFolderFlags
@@ -96,6 +115,14 @@ QuickFolders.Util = {
 		MSG_FOLDER_FLAG_GOTNEW    : 0x00020000,
     MSG_FOLDER_FLAG_OFFLINE   : 0x08000000
 	},
+  ADVANCED_FLAGS: {
+    NONE : 0x0000,
+    SUPPRESS_UNREAD : 0x0001,
+    SUPPRESS_COUNTS : 0x0002,
+		EMAIL_RECURSIVE : 0x0004,
+    CUSTOM_CSS :      0x0100,
+    CUSTOM_PALETTE :  0x0200
+  } ,	
 	// avoid these global objects
 	Cc: Components.classes,
 	Ci: Components.interfaces,
@@ -212,7 +239,7 @@ QuickFolders.Util = {
 	// detect current QuickFolders version and storing it in mExtensionVer
 	// this is done asynchronously, so it respawns itself
 	VersionProxy: function VersionProxy() {
-    let util = QuickFolders.Util;
+    const util = QuickFolders.Util;
 		try {
 			if (util.mExtensionVer // early exit, we got the version!
 				||
@@ -220,13 +247,7 @@ QuickFolders.Util = {
 				return;
 			util.VersionProxyRunning = true;
 			util.logDebugOptional("firstrun", "Util.VersionProxy() started.");
-			if (Components.utils.import || ChromeUtils.import) {
-				if (typeof AddonManager != 'object') {
-					if (ChromeUtils.import)
-						ChromeUtils.import("resource://gre/modules/AddonManager.jsm");
-					else
-						Components.utils.import("resource://gre/modules/AddonManager.jsm");
-				}
+			if (Components.utils.import) {
 				
 				let versionCallback = function(addon) {
 					let versionLabel = window.document.getElementById("qf-options-header-description");
@@ -240,10 +261,13 @@ QuickFolders.Util = {
 						util.FirstRun.init();
 				}
 				
+				Components.utils.import("resource://gre/modules/AddonManager.jsm");
+				const addonId = util.ADDON_ID.toString();
+				
 				if (util.versionGreaterOrEqual(util.ApplicationVersion, "61")) 
-					AddonManager.getAddonByID(util.ADDON_ID).then(versionCallback); // this function is now a promise
+					AddonManager.getAddonByID(addonId).then(function(addonId) { versionCallback(addonId); } ); // this function is now a promise
 				else
-					AddonManager.getAddonByID("quickfolders@curious.be", versionCallback);
+					AddonManager.getAddonByID(addonId, versionCallback);
 			}
 
 			util.logDebugOptional("firstrun", "AddonManager.getAddonByID .. added callback for setting extensionVer.");
@@ -470,6 +494,7 @@ QuickFolders.Util = {
   
 	popupProFeature: function popupProFeature(featureName, text) {
 		let notificationId,
+		    notifyBox,
         util = QuickFolders.Util,
 				prefs = QuickFolders.Preferences,
 				maindoc = util.getMail3PaneWindow().document;
@@ -493,9 +518,15 @@ QuickFolders.Util = {
 				notificationId = null;
 				break;
 		}
-		let notifyBox = maindoc.getElementById (notificationId);
-    if (notifyBox)
-      util.logDebugOptional("premium", "notificationId = " + notificationId + ", found" + notifyBox);
+		
+		if (typeof specialTabs == 'object' && specialTabs.msgNotificationBar) { // Tb 68
+			notifyBox = specialTabs.msgNotificationBar;
+		}
+		else {
+			notifyBox = maindoc.getElementById (notificationId);
+			if (notifyBox)
+				util.logDebugOptional("premium", "notificationId = " + notificationId + ", found" + notifyBox);
+		}
 		let title=util.getBundleString("qf.notification.premium.title", "Premium Feature"),
 		    theText=util.getBundleString("qf.notification.premium.text",
 				        "{1} is a Premium feature, please get a QuickFolders Pro License for using it permanently.");
@@ -583,7 +614,7 @@ QuickFolders.Util = {
 				return hexColor;
 			}
 			let theColor, // convert system colors such as menubackground etc. to hex
-			    d = document.createElement("div");
+			    d = document.createXULElement ? document.createXULElement("div") : document.createElement("div");
 			d.style.color = sColorString;
 			getContainer().appendChild(d)
 			theColor = window.getComputedStyle(d,null).color;
@@ -738,9 +769,10 @@ QuickFolders.Util = {
 		return found;
 	 } ,
 
-	showStatusMessage: function showStatusMessage(s) {
+	showStatusMessage: function showStatusMessage(s, isTimeout) {
 		try {
-			let sb = QuickFolders_getDocument().getElementById('status-bar'),
+			let win = QuickFolders_getWindow(),
+			    sb = QuickFolders_getDocument().getElementById('status-bar'),
 			    el, sbt;
 			if (sb) {
 				for (let i = 0; i < sb.childNodes.length; i++)
@@ -759,7 +791,15 @@ QuickFolders.Util = {
 					el = sbt.childNodes[i];
 					if (el.nodeType == 1 && el.id == 'statusText') {
 					    el.label = s;
-					    break;
+							if (isTimeout) {
+								// erase my status message after 5 secs
+								win.setTimeout(function() { 
+								    if (el.label == s) // remove my message if it is still there
+											el.label = "";
+									}, 
+									5000);
+							}
+							break;
 					}
 				}
 			}
@@ -861,15 +901,6 @@ QuickFolders.Util = {
 			step = 2;
 
 			// copy what we need...
-			// let myInfos = [{ recipient: x.mime2DecodedRecipients, subject: x.subject}
-			//		for each ([, x] in fixIterator(myMessages))];
-
-			// OR
-			// let q = Gloda.newQuery(Gloda.NOUN_MSG);
-			// q.headerMessageID(messageId);
-			// q.run(listener) => async
-			// q.getCollection(listener)
-
 			let messageIdList = [],
           isMarkAsRead = QuickFolders.Preferences.getBoolPref('markAsReadOnMove'),
           bookmarks = QuickFolders.bookmarks;
@@ -1474,18 +1505,22 @@ QuickFolders.Util = {
 		return s;
 	} ,
 
-	getFolderTooltip: function getFolderTooltip(folder) {
+	getFolderTooltip: function getFolderTooltip(folder, btnLabel) {
 		// tooltip - see also Attributes section of
 		// https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIMsgFolder#getUriForMsg.28.29
 		// and docs for nsIMsgIncomingServer
 		let getPref = function(arg) { return QuickFolders.Preferences.getBoolPref('tooltips.' + arg); },
-		    sVirtual = (folder.flags & this.FolderFlags.MSG_FOLDER_FLAG_VIRTUAL) ? " (virtual)" : "",
+		    sVirtual = folder && (folder.flags & this.FolderFlags.MSG_FOLDER_FLAG_VIRTUAL) ? " (virtual)" : "",
 			  baseFolder = '',
 		    srvName = '',
 				tooltip = '',
 				folderName = '',
 			  flags = '';
-		if (!folder) return '';
+		if (!folder) {
+			if (btnLabel)
+				return "No Folder for [" + btnLabel + "] - try the 'Find Orphaned Tabs' command.";
+			return "Missing Folder - try the 'Find Orphaned Tabs' command.";
+		}
 		
 		try {
 			folderName = folder.name;
@@ -1662,7 +1697,7 @@ QuickFolders.Util = {
 	
 	doesMailUriExist: function checkUriExists(URI) {
 		let f = QuickFolders.Model.getMsgFolderFromUri(URI);
-		return (f.parent) ? true : false;
+		return (f && f.parent) ? true : false;
 	},
 	
 	polyFillEndsWidth: function polyFillEndsWidth() {
@@ -1799,7 +1834,73 @@ QuickFolders.Util = {
 				styleEngine.setElementStyle(ss, "#QuickFolders-Toolbar.quickfolders-flat", '-moz-appearance', 'none');
 			}
 		}
+	} ,
+	
+  Postbox_writeFile: function Pb_writeFile(path, jsonData) {
+    const Ci = Components.interfaces,
+          Cc = Components.classes,
+					NSIFILE = Ci.nsILocalFile || Ci.nsIFile;
+    
+    let file = Cc["@mozilla.org/file/local;1"].createInstance(NSIFILE); // Postbox specific. deprecated in Tb 57
+    file.initWithPath(path);
+    // stateString.data = aData;
+    // Services.obs.notifyObservers(stateString, "sessionstore-state-write", "");
+
+    // Initialize the file output stream.
+    let ostream = Cc["@mozilla.org/network/safe-file-output-stream;1"].createInstance(Ci.nsIFileOutputStream);
+    ostream.init(file, 
+                 0x02 | 0x08 | 0x20,   // write-only,create file, reset if exists
+                 0x600,   // read+write permissions
+                 ostream.DEFER_OPEN); 
+
+    // Obtain a converter to convert our data to a UTF-8 encoded input stream.
+    let converter = Cc["@mozilla.org/intl/scriptableunicodeconverter"].createInstance(Ci.nsIScriptableUnicodeConverter);
+    converter.charset = "UTF-8";
+
+    // Asynchronously copy the data to the file.
+    let istream = converter.convertToInputStream(jsonData); // aData
+    NetUtil.asyncCopy(istream, ostream, function(rc) {
+      if (Components.isSuccessCode(rc)) {
+        // do something for success
+      }
+    });
+  } ,
+  
+  Postbox_readFile: function Pb_readFile(path) {
+    const Ci = Components.interfaces,
+          Cc = Components.classes,
+					NSIFILE = Ci.nsILocalFile || Ci.nsIFile;
+    let file = Cc["@mozilla.org/file/local;1"].createInstance(NSIFILE); // Postbox specific. deprecated in Tb 57
+    file.initWithPath(path);
+          
+    let fstream = Cc["@mozilla.org/network/file-input-stream;1"].
+                  createInstance(Ci.nsIFileInputStream);
+    fstream.init(file, -1, 0, 0);
+
+    let cstream = Cc["@mozilla.org/intl/converter-input-stream;1"].
+                  createInstance(Ci.nsIConverterInputStream);
+    cstream.init(fstream, "UTF-8", 0, 0);
+
+    let string  = {};
+    cstream.readString(-1, string);
+    cstream.close();
+    return string.value;    
+  }, 
+	
+	alertButtonNoFolder: function alertButtonNoFolder(button) {
+		let txt = button ? button.getAttribute('folderURI') : "";
+		alert("This folder doesn't exist! Function not available.." 
+		  + txt ? "\nFolder URI = " + txt : "");
+	} ,
+	
+	// helper function to get a name from an uri that has no folder
+	getNameFromURI: function getNameFromURI(uri) {
+		if (!uri) return "no uri";
+		const ellipsis = "\u2026".toString();
+		let slash = uri.lastIndexOf("/");
+		return slash>0 ? ellipsis  + uri.substr(slash) : ellipsis + uri.substr(-16);
 	}
+
   
 };  // QuickFolders.Util
 
@@ -1827,8 +1928,8 @@ QuickFolders.Util.FirstRun = {
 		util.logDebug("Current QuickFolders Version: " + current);
 
 		try {
-			util.logDebugOptional ("firstrun","try to get setting: getCharPref(version)");
-			try { prev = ssPrefs.getCharPref("version"); }
+			util.logDebugOptional ("firstrun","try to get setting: getStringPref(version)");
+			try { prev = ssPrefs.getStringPref("version"); }
 			catch (e) {
 				prev = "?";
 				util.logDebugOptional ("firstrun","Could not determine previous version - " + e);
@@ -1871,7 +1972,7 @@ QuickFolders.Util.FirstRun = {
 			// STORE CURRENT VERSION NUMBER!
 			if (prev!=pureVersion && current!='?' && (current.indexOf(util.HARDCODED_EXTENSION_TOKEN) < 0)) {
 				util.logDebugOptional ("firstrun","Store current version " + current);
-				ssPrefs.setCharPref("version", pureVersion); // store sanitized version! (no more alert on pre-Releases + betas!)
+				ssPrefs.setStringPref("version", pureVersion); // store sanitized version! (no more alert on pre-Releases + betas!)
 			}
 			else {
 				util.logDebugOptional ("firstrun","Can't store current version: " + current

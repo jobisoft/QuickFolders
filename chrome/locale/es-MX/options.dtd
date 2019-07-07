@@ -77,6 +77,9 @@
 <!ENTITY qf.label.menus.options "Opciones">
 <!ENTITY qf.caption.currentFolderBackground "Fondo de la barra de herramientas de la carpeta actual">
 <!ENTITY qf.button.currentFolderBackground.set "establecer">
+<!ENTITY qf.checkbox.currentfolder.lightweight "integrar con el tema ligero">
+<!ENTITY qf.currentfolder.leftSpacer "Espaciador izquierdo:">
+<!ENTITY qf.currentfolder.rightSpacer "Espaciador derecho:">
 <!ENTITY qf.currentFolderBackground.default "por omisión">
 <!ENTITY qf.currentFolderBackground.dark "oscuro">
 <!ENTITY qf.currentFolderBackground.translucent "transparente">
@@ -178,6 +181,12 @@
 <!ENTITY qf.checkbox.quickmove.autofill.tip "La última carpeta utilizada exitosamente será insertada. Presione INTRO para usarla, o implemente reescriba para otros destinos.">
 <!ENTITY qf.checkbox.skipFolder "Brincar carpeta No leída - utilice atajo MAYUS +">
 <!ENTITY qf.checkbox.skipFolder.tip "Atajo para brincar a la siguiente carpeta no leída.">
+<!ENTITY qf.backupAndRestore "Respaldo / Restauración">
+<!ENTITY qf.storeConfig "Guardar la configuración…">
+<!ENTITY qf.loadConfig "Cargar la configuración…">
+<!ENTITY qf.checkbox.storeConfig.tabs "Incluir pestañas de QuickFolders">
+<!ENTITY qf.checkbox.storeConfig.general "Incluir ajustes generales">
+<!ENTITY qf.checkbox.storeConfig.layout "Incluir avanzado y presentación">
 <!ENTITY qf.quickMove.path.format "Formato de despliegue:">
 <!ENTITY qf.pathFormat.folderName "Nombre de la carpeta">
 <!ENTITY qf.pathFormat.folderAndAccount "Nombre de carpeta - Cuenta de correo">
