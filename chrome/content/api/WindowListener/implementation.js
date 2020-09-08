@@ -84,15 +84,6 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
     return {
       WindowListener: {
 
-        showSettingsPage() {
-
-        console.log("from MX");  
-        let mail3PaneWindow = Components.classes["@mozilla.org/appshell/window-mediator;1"]
-				.getService(Components.interfaces.nsIWindowMediator)
-        .getMostRecentWindow("mail:3pane");  
-        mail3PaneWindow.openDialog("chrome://quickfolders/content/register.xhtml");
-        },
-
         registerOptionsPage(optionsUrl) {
           self.pathToOptionsPage = optionsUrl.startsWith("chrome://")
             ? optionsUrl

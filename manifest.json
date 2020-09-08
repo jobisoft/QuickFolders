@@ -35,8 +35,22 @@
         "script": "chrome/content/api/LegacyPrefs/implementation.js"
       
       }
-    }
+    },
+    "Utilities": {
+      "schema": "chrome/content/api/Utilities/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["Utilities"]],
+        "script": "chrome/content/api/Utilities/implementation.js"
+      
+       }
+     }
+  
+
+
   },
+  
+
 
  "icons" : { 
     "16" : "chrome/content/skin/ico/QF16x16.png",

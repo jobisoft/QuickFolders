@@ -2,14 +2,7 @@
   {
     "namespace": "WindowListener",
     "functions": [
-      
-      {
-        "name": "showSettingsPage",
-        "type": "function",
-        "parameters": []
-      },
-         
-      
+       
       
       {
         "name": "registerDefaultPrefs",
