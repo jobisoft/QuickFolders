@@ -101,7 +101,7 @@ async function main() {
 
     messenger.WindowListener.startListening();
 
-    messenger.WindowListener.showSettingsPage();
+
 }
 
 main();

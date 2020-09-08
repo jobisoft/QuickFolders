@@ -90,7 +90,7 @@ var WindowListener = class extends ExtensionCommon.ExtensionAPI {
         let mail3PaneWindow = Components.classes["@mozilla.org/appshell/window-mediator;1"]
 				.getService(Components.interfaces.nsIWindowMediator)
         .getMostRecentWindow("mail:3pane");  
-        mail3PaneWindow.openDialog("chrome://quickfolders/content/options.xhtml");
+        mail3PaneWindow.openDialog("chrome://quickfolders/content/register.xhtml");
         },
 
         registerOptionsPage(optionsUrl) {
