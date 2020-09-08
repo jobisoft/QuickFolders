@@ -1,0 +1,14 @@
+[
+  {
+    "namespace": "Utilities",
+    "functions": [
+     
+      {
+        "name": "showRegisterPage",
+        "type": "function",
+        "parameters": []
+      }
+        
+   ]
+  }
+]
