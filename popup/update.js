@@ -1,16 +1,18 @@
 
 addEventListener("click", async (event) => {
 	if (event.target.id.startsWith("register")) {
-	  //checkAnswer(event.target);
-	  messenger.Utilities.showRegisterPage();	
+
+	  messenger.Utilities.openLinkExternally("http://sites.fastspring.com/quickfolders/product/quickfolders?referrer=landing-update");
 	}
   });
-//let button_reg= document.getElementById("register");
 
-function call_reg () {
 
- // messenger.Utilities.showRegisterPage();	
-}
+  addEventListener("click", async (event) => {
+	if (event.target.id.startsWith("donate")) {
 
-button_reg.addEventListener("click",call_reg , "true");
+	  messenger.Utilities.openLinkExternally("http://quickfolders.org/donate.html");
+	}
+  });  
+
+
 

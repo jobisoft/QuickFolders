@@ -4,11 +4,33 @@
     "functions": [
      
       {
-        "name": "showRegisterPage",
+        "name": "showXhtmlPage",
         "type": "function",
-        "parameters": []
+        "parameters": [
+          {
+            "name": "url",
+            "type": "string",
+            "description": "url to open in browser"
+          }
+
+
+        ]
+      },
+
+      {
+        "name": "openLinkExternally",
+        "type": "function",
+        "parameters": [
+          {
+            "name": "url",
+            "type": "string",
+            "description": "url to open in browser"
+          }
+ 
+
+        ]
       }
-        
+
    ]
   }
 ]
