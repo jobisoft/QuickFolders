@@ -21,7 +21,7 @@ async function main() {
            case "update":
              {
                const url = browser.runtime.getURL("popup/update.html");
-               messenger.Utilities.showRegisterPage();
+               //messenger.Utilities.showRegisterPage();
                //await browser.tabs.create({ url });
                await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
              }

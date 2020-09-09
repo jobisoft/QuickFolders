@@ -1,6 +1,11 @@
 
-
-let button_reg= document.getElementById("register");
+addEventListener("click", async (event) => {
+	if (event.target.id.startsWith("register")) {
+	  //checkAnswer(event.target);
+	  messenger.Utilities.showRegisterPage();	
+	}
+  });
+//let button_reg= document.getElementById("register");
 
 function call_reg () {
 
