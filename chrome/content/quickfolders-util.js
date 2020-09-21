@@ -1809,7 +1809,8 @@ QuickFolders.Util = {
 				//QI.ensureStyleSheetLoaded('chrome://quickfolders/content/skin/mac/qf-platform.css', 'QuickFolderPlatformStyles');
 				break;
 		}
-		let newCSS = QuickFolders_globalWin.QuickFolders.WL.injectCSS(path);
+		let newCSS = win.QuickFolders.WL.injectCSS(path);
+		//QuickFolders_globalWin
 		newCSS.setAttribute("title", "QuickFolderPlatformStyles");
 if (util.ApplicationName =="Interlink") {
 			let url = win.document.URL,
