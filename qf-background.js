@@ -11,10 +11,19 @@ async function main() {
       let isProUser=false, 
           isExpired=false;
       try {
+
+
+        //das geht nicht, das ist nur über die helfer - api messenger.Utilities.someFunction erreichbar!!!
+        //also wie in installed.js:
+        messenger.Utilities.isLicensed()
+        
+        /*
+        und dort der folgende Code:
         const util = window.QuickFolders.Util,
               licenser = util.Licenser,
               isPremiumLicense = util.hasPremiumLicense(false) || util.Licenser.isExpired;
-      }
+      */
+     }
       catch (ex) {
         console.log("LEGACY PROBLEM IN qf-background.js !!");
         console.log("LEGACY PROBLEM IN qf-background.js !!");
