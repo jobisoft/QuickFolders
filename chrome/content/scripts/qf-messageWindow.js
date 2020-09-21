@@ -129,7 +129,7 @@ function onLoad(activatedWhileWindowOpen) {
    
     window.QuickFolders.Util.logDebug('Adding messageWindow...');
     // window.QuickFolders_mailSession.AddFolderListener(window.QuickFolders.FolderListener, Components.interfaces.nsIFolderListener.all);
-    window.QuickFolders.initDelayed(window);
+    window.QuickFolders.initDelayed(window, WL);
 }
 
 function onUnload(isAddOnShutDown) {
