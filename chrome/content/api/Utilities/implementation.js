@@ -25,8 +25,8 @@ var Utilities = class extends ExtensionCommon.ExtensionAPI {
 
         isLicensed() {
           const util = win.QuickFolders.Util;
-          licenser = util.Licenser;
-          isPremiumLicense = util.hasPremiumLicense(false) || util.Licenser.isExpired;
+          let licenser = util.Licenser;
+          let isPremiumLicense = util.hasPremiumLicense(false) || util.Licenser.isExpired;
       
         return  isPremiumLicense;//(win.QuickFolders.Licenser).isLicensed;
          
