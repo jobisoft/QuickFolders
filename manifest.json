@@ -1,9 +1,10 @@
 { 
   "author" : "Axel Grude",
   "manifest_version" : 2,
-  "name" : "QuickFolders",
+  "name" : __MSG_extensionName__,
   "description" : "Bookmark your favorite mail folders in Thunderbird.",
   "version" : "5.0pre90",
+  "default_locale": "en",
   "developer" : { 
       "name" : "Axel Grude",
       "url" : "http://quickfolders.org/index.html"
