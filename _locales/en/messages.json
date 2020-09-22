@@ -13,6 +13,10 @@
     "message": "Click notification",
     "description": "Title of the click notification."
   },
+  "Updated": {
+    "message": "Updated (en)",
+    "description": ""
+  },
 
   "notificationContent": {
     "message": "You clicked $URL$.",
