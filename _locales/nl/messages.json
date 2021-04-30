@@ -1100,7 +1100,7 @@
     "message": "Nieuwe map"
   },
   "qf.prompt.pasteFolders": {
-    "message": "Dit verwijdert alle QuickFolders-tabbladen en vervangt deze door de items op uw klembord.\\n{0} items gevonden op klembord.\\nWeet u het zeker?"
+    "message": "Dit verwijdert alle QuickFolders-tabbladen en vervangt deze door de items op uw klembord.\n{0} items gevonden op klembord.\nWeet u het zeker?"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "Weergegeven tabbladen behouden?"
@@ -1109,10 +1109,10 @@
     "message": "Dit bericht verwijderen?"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "Kan de e-mail niet vinden; mogelijk is deze ondertussen verplaatst.\\n{1}\\n\\nWilt u ernaar zoeken?"
+    "message": "Kan de e-mail niet vinden; mogelijk is deze ondertussen verplaatst.\n{1}\n\nWilt u ernaar zoeken?"
   },
   "qf.prompt.restoreFolders": {
-    "message": "Dit verwijdert alle QuickFolders-tabbladen en vervangt deze door de items in het bestand.\\n{0} items zijn gelezen.\\nTabbladen vervangen?"
+    "message": "Dit verwijdert alle QuickFolders-tabbladen en vervangt deze door de items in het bestand.\n{0} items zijn gelezen.\nTabbladen vervangen?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "Wisselen naar domeinlicentie?"
@@ -1523,7 +1523,7 @@
     "message": ": Dit tabblad verwijst naar een ongeldige map."
   },
   "qfTidyDeadFolders": {
-    "message": "Dit verwijdert de tabbladen waaraan geen geldige mappen zijn toegewezen.\\nDit gebeurt soms als een map wordt verwijderd of verplaatst zonder dat QuickFolders hiervan op de hoogte wordt gesteld."
+    "message": "Dit verwijdert de tabbladen waaraan geen geldige mappen zijn toegewezen.\nDit gebeurt soms als een map wordt verwijderd of verplaatst zonder dat QuickFolders hiervan op de hoogte wordt gesteld."
   },
   "qfTreeIconsInvalidCount": {
     "message": "{0} ontbrekende pictogrammen"

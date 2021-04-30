@@ -1100,7 +1100,7 @@
     "message": "Nueva carpeta"
   },
   "qf.prompt.pasteFolders": {
-    "message": "Esto borrará todas las pestañas de QuickFolders y las reemplazará con los elementos en su portapapeles.\\nSe encontraron {0} entradas en el portapapeles.\\n ¿Está seguro?"
+    "message": "Esto borrará todas las pestañas de QuickFolders y las reemplazará con los elementos en su portapapeles.\nSe encontraron {0} entradas en el portapapeles.\n ¿Está seguro?"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "¿Conservar las pestañas mostradas?"
@@ -1109,10 +1109,10 @@
     "message": "¿Eliminar este elemento?"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "No se puede encontrar el correo, podría haber sido movido a cualquier parte entre tanto.\\n{1}\\n\\¿Quiere buscarlo?"
+    "message": "No se puede encontrar el correo, podría haber sido movido a cualquier parte entre tanto.\n{1}\n¿Quiere buscarlo?"
   },
   "qf.prompt.restoreFolders": {
-    "message": "Esto eliminará todas las pestañas de QuickFolders y las reemplazará con los elementos del archivo.\\n{0} se leyeron las entradas.\\n¿Reemplazar pestañas?"
+    "message": "Esto eliminará todas las pestañas de QuickFolders y las reemplazará con los elementos del archivo.\n{0} se leyeron las entradas.\n¿Reemplazar pestañas?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "¿Cambiar a licencia de dominio?"
@@ -1523,7 +1523,7 @@
     "message": ": Esto es una pestaña que apunta a una carpeta no válida:"
   },
   "qfTidyDeadFolders": {
-    "message": "Esto eliminará las Pestañas que no tienen carpetas válidas asignadas.\\nEsto ocurre a veces si una carpeta se borra o mueve sin que QuickFolders sea notificado."
+    "message": "Esto eliminará las Pestañas que no tienen carpetas válidas asignadas.\nEsto ocurre a veces si una carpeta se borra o mueve sin que QuickFolders sea notificado."
   },
   "qfTreeIconsInvalidCount": {
     "message": "{0} iconos ausentes"

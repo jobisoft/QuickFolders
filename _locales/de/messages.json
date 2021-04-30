@@ -1100,7 +1100,7 @@
     "message": "Neues Verzeichnis"
   },
   "qf.prompt.pasteFolders": {
-    "message": "Löscht all QuickFolder Tabs und erzeugt neue aus der Zwischenablage.\\nEs wurden {0} Einträge gefunden.\\nSind Sie sicher?"
+    "message": "Löscht all QuickFolder Tabs und erzeugt neue aus der Zwischenablage.\nEs wurden {0} Einträge gefunden.\nSind Sie sicher?"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "Die angezeigten Tabs beibehalten?"
@@ -1109,10 +1109,10 @@
     "message": "Diesen Eintrag entfernen?"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "Diese Email kann nicht gefunden werden, sie wurde vielleicht in ein anderes Verzeichnis verschoben.\\n{1}\\n\\nDanach suchen?"
+    "message": "Diese Email kann nicht gefunden werden, sie wurde vielleicht in ein anderes Verzeichnis verschoben.\n{1}\n\nDanach suchen?"
   },
   "qf.prompt.restoreFolders": {
-    "message": "Löscht all QuickFolder Tabs und erzeugt neue aus der Datei.\\nEs wurden {0} Einträge gefunden.\\nTabs ersetzen?"
+    "message": "Löscht all QuickFolder Tabs und erzeugt neue aus der Datei.\nEs wurden {0} Einträge gefunden.\nTabs ersetzen?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "Domänenlizenz aktivieren?"
@@ -1523,7 +1523,7 @@
     "message": ": Dieser Tab verweist auf ein ungültiges Verzeichnis."
   },
   "qfTidyDeadFolders": {
-    "message": "Löscht die Tabs die keinem gültigen Verzeichnis zugehören.\\nDies kann passieren, wenn ein Verzeichnis gelöscht oder verschoben wird ohne daß QuickFolders dies erkennt."
+    "message": "Löscht die Tabs die keinem gültigen Verzeichnis zugehören.\nDies kann passieren, wenn ein Verzeichnis gelöscht oder verschoben wird ohne daß QuickFolders dies erkennt."
   },
   "qfTreeIconsInvalidCount": {
     "message": "{0} fehlende Symbole"

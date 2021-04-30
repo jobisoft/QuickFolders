@@ -1100,7 +1100,7 @@
     "message": "新しいフォルダ"
   },
   "qf.prompt.pasteFolders": {
-    "message": "すべての QuickFolders タブを削除し、クリップボード内のアイテムと置き換えます。\\n{0} エントリがクリップボードに見つかりました。\\n本当によろしいですか？"
+    "message": "すべての QuickFolders タブを削除し、クリップボード内のアイテムと置き換えます。\n{0} エントリがクリップボードに見つかりました。\n本当によろしいですか？"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "表示中のタブを維持しますか？"
@@ -1109,10 +1109,10 @@
     "message": "このアイテムを削除しますか？"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "メールが見つかりません。検索中に別の場所へ移動された可能性があります。\\n{1}\\n\\n再度検索しますか？"
+    "message": "メールが見つかりません。検索中に別の場所へ移動された可能性があります。\n{1}\n\n再度検索しますか？"
   },
   "qf.prompt.restoreFolders": {
-    "message": "This will delete all QuickFolders tabs and replace with the items from the file.\\n{0} entries were read.\\nReplace tabs?"
+    "message": "This will delete all QuickFolders tabs and replace with the items from the file.\n{0} entries were read.\nReplace tabs?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "ドメインライセンスに切り替えますか？"
@@ -1283,7 +1283,7 @@
     "message": "{0} フォルダは移動できません。"
   },
   "qfColorPickingWIP": {
-    "message": "申し訳ありませんが、この機能は未完成です!\\n"
+    "message": "申し訳ありませんが、この機能は未完成です!\n"
   },
   "qfCommandAccess": {
     "message": "Q"
@@ -1523,7 +1523,7 @@
     "message": ": このタブは不正なフォルダを指しています:"
   },
   "qfTidyDeadFolders": {
-    "message": "フォルダが正しく割り当てられていないタブを削除します。\\nこれは、QuickFolders に気付かれることなくフォルダが削除されたり移動されたりした場合に起こることがあります。"
+    "message": "フォルダが正しく割り当てられていないタブを削除します。\nこれは、QuickFolders に気付かれることなくフォルダが削除されたり移動されたりした場合に起こることがあります。"
   },
   "qfTreeIconsInvalidCount": {
     "message": "{0} 個のアイコンが足りません"

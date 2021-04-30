@@ -1100,7 +1100,7 @@
     "message": "Ny mapp"
   },
   "qf.prompt.pasteFolders": {
-    "message": "Detta kommer att radera alla QuickFolders-flikar och ersättas med objekten i ditt urklipp.\\n{0} element hittades i urklipp.\\nÄr du säker?"
+    "message": "Detta kommer att radera alla QuickFolders-flikar och ersättas med objekten i ditt urklipp.\n{0} element hittades i urklipp.\nÄr du säker?"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "Behålla de synliga flikarna?"
@@ -1109,10 +1109,10 @@
     "message": "Ta bort detta objekt?"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "Kan inte hitta e-postmeddelandet, det kanske har flyttats någonstans under tiden.\\n{1}\\n\\nVill du söka efter det?"
+    "message": "Kan inte hitta e-postmeddelandet, det kanske har flyttats någonstans under tiden.\n{1}\n\nVill du söka efter det?"
   },
   "qf.prompt.restoreFolders": {
-    "message": "Detta tar bort alla QuickFolders-flikar och ersätter dem med objekten från filen.\\n{0} poster lästes.\\nErsätt flikar?"
+    "message": "Detta tar bort alla QuickFolders-flikar och ersätter dem med objekten från filen.\n{0} poster lästes.\nErsätt flikar?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "Byt till domänlicens?"
@@ -1523,7 +1523,7 @@
     "message": ": Det här är en flik som hänvisar till en ogiltig mapp:"
   },
   "qfTidyDeadFolders": {
-    "message": "Det här kommer att ta bort de flikar som inte har några giltiga mappar tilldelade sig.\\nDet här kan hända om en mapp tas bort eller flyttas utan att QuickFolders meddelas om ändringen."
+    "message": "Det här kommer att ta bort de flikar som inte har några giltiga mappar tilldelade sig.\nDet här kan hända om en mapp tas bort eller flyttas utan att QuickFolders meddelas om ändringen."
   },
   "qfTreeIconsInvalidCount": {
     "message": "{0} ikoner saknas"

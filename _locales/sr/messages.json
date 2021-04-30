@@ -1100,7 +1100,7 @@
     "message": "New Folder"
   },
   "qf.prompt.pasteFolders": {
-    "message": "This will delete all QuickFolders tabs and replace with the items in your clipboard.\\n{0} entries were found in clipboard.\\nReplace tabs?"
+    "message": "This will delete all QuickFolders tabs and replace with the items in your clipboard.\n{0} entries were found in clipboard.\nReplace tabs?"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "Keep the displayed Tabs?"
@@ -1109,10 +1109,10 @@
     "message": "Уклонити ову ставку?"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "Није могуће наћи поруку. Могуће је да је негде премештена у међувремену.\\n{1}\\n\\nЖелите ли да је потражите?"
+    "message": "Није могуће наћи поруку. Могуће је да је негде премештена у међувремену.\n{1}\n\nЖелите ли да је потражите?"
   },
   "qf.prompt.restoreFolders": {
-    "message": "This will delete all QuickFolders tabs and replace with the items from the file.\\n{0} entries were read.\\nReplace tabs?"
+    "message": "This will delete all QuickFolders tabs and replace with the items from the file.\n{0} entries were read.\nReplace tabs?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "Switch to Domain License?"
@@ -1523,7 +1523,7 @@
     "message": ": ово је језичак који указује на неважећу фасциклу:"
   },
   "qfTidyDeadFolders": {
-    "message": "Ово ће уклонити језичке којима нису додељене важеће фасцикле.\\nОво се понекад дешава ако је фасцикла избрисана или премештена без обавештавања додатка QuickFolders."
+    "message": "Ово ће уклонити језичке којима нису додељене важеће фасцикле.\nОво се понекад дешава ако је фасцикла избрисана или премештена без обавештавања додатка QuickFolders."
   },
   "qfTreeIconsInvalidCount": {
     "message": "{0} икона/е недостаје"

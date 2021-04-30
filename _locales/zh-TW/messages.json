@@ -1100,7 +1100,7 @@
     "message": "新資料夾"
   },
   "qf.prompt.pasteFolders": {
-    "message": "這將刪除所有QuickFolders分頁，並從你的剪貼簿中置換項目。在剪貼簿中發現\\n{0} 項目，你確定嗎？"
+    "message": "這將刪除所有QuickFolders分頁，並從你的剪貼簿中置換項目。在剪貼簿中發現\n{0} 項目，你確定嗎？"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "保持顯示的分頁？"
@@ -1109,10 +1109,10 @@
     "message": "移除這個項目？"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "不能找到該封信件，或許是因為它在某個時候被移動到另外的地方。\\n{1}\\n\\n您想要搜尋這封郵件嗎？"
+    "message": "不能找到該封信件，或許是因為它在某個時候被移動到另外的地方。\n{1}\n\n您想要搜尋這封郵件嗎？"
   },
   "qf.prompt.restoreFolders": {
-    "message": "這將刪除所有 QuickFolders 分頁並且置換檔案中的項目。讀取到  \\n{0} 項目。 \\n 置換分頁？"
+    "message": "這將刪除所有 QuickFolders 分頁並且置換檔案中的項目。讀取到  \n{0} 項目。 \n 置換分頁？"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "切換到主要的授權？"
@@ -1523,7 +1523,7 @@
     "message": "：這是一個指向不正確資料夾的標籤："
   },
   "qfTidyDeadFolders": {
-    "message": "這將移除那些指向不正確資料夾的標籤。\\n 這有時候發生在QuickFolders沒有注意到一個已經刪除或移動的資料夾。"
+    "message": "這將移除那些指向不正確資料夾的標籤。\n 這有時候發生在QuickFolders沒有注意到一個已經刪除或移動的資料夾。"
   },
   "qfTreeIconsInvalidCount": {
     "message": "{0} 圖示遺失"

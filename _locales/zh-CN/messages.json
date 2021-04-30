@@ -1100,7 +1100,7 @@
     "message": "新建文件夹"
   },
   "qf.prompt.pasteFolders": {
-    "message": "This will delete all QuickFolders tabs and replace with the items in your clipboard.\\n{0} entries were found in clipboard.\\nReplace tabs?"
+    "message": "This will delete all QuickFolders tabs and replace with the items in your clipboard.\n{0} entries were found in clipboard.\nReplace tabs?"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "Keep the displayed Tabs?"
@@ -1109,10 +1109,10 @@
     "message": "移除此项？"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "无法找到该邮件，它可能已被移动到别处。\\n{1}\\n\\n您想搜索它吗？"
+    "message": "无法找到该邮件，它可能已被移动到别处。\n{1}\n\n您想搜索它吗？"
   },
   "qf.prompt.restoreFolders": {
-    "message": "This will delete all QuickFolders tabs and replace with the items from the file.\\n{0} entries were read.\\nReplace tabs?"
+    "message": "This will delete all QuickFolders tabs and replace with the items from the file.\n{0} entries were read.\nReplace tabs?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "切换到域授权？"
@@ -1523,7 +1523,7 @@
     "message": ": 这是一个指向无效文件夹的导航卡:"
   },
   "qfTidyDeadFolders": {
-    "message": "该操作将移除没有文件夹关联的无效导航卡。\\n当文件夹被删除或移动而组件没有收到通知时可能会发生这种情况。"
+    "message": "该操作将移除没有文件夹关联的无效导航卡。\n当文件夹被删除或移动而组件没有收到通知时可能会发生这种情况。"
   },
   "qfTreeIconsInvalidCount": {
     "message": "缺少{0}个图标"

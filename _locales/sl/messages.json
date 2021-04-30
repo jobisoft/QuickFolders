@@ -1100,7 +1100,7 @@
     "message": "Nova mapa"
   },
   "qf.prompt.pasteFolders": {
-    "message": "To bo izbrisalo vse zavihke s hitrimi mapami in jih nadomestilo s predmeti na odložišču.\\nNo odložišču je bilo najdenih {0} predmetov.\\Ali ste prepričani?"
+    "message": "To bo izbrisalo vse zavihke s hitrimi mapami in jih nadomestilo s predmeti na odložišču.\nNo odložišču je bilo najdenih {0} predmetov.\nAli ste prepričani?"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "Ohrani prikazane zavihke?"
@@ -1109,10 +1109,10 @@
     "message": "Odstrani ta predmet?"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "Pošte ni mogoče najti, morda je bila med tem premaknjena drugam .\\n{1}\\n\\nAli jo želite poiskati?"
+    "message": "Pošte ni mogoče najti, morda je bila med tem premaknjena drugam .\n{1}\n\nAli jo želite poiskati?"
   },
   "qf.prompt.restoreFolders": {
-    "message": "This will delete all QuickFolders tabs and replace with the items from the file.\\n{0} entries were read.\\nReplace tabs?"
+    "message": "This will delete all QuickFolders tabs and replace with the items from the file.\n{0} entries were read.\nReplace tabs?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "Preklopi na domensko dovoljenje?"
@@ -1523,7 +1523,7 @@
     "message": ": To je zavihek, ki kaže na neveljavno mapo:"
   },
   "qfTidyDeadFolders": {
-    "message": "To bo odstranilo zavihke, ki nimajo dodeljenih veljavnih map.\\nTo se včasih zgodi, če je mapa izbrisana ali premaknjena brez obveščanja razširitve QuickFolders."
+    "message": "To bo odstranilo zavihke, ki nimajo dodeljenih veljavnih map.\nTo se včasih zgodi, če je mapa izbrisana ali premaknjena brez obveščanja razširitve QuickFolders."
   },
   "qfTreeIconsInvalidCount": {
     "message": "{0} ikon manjka"

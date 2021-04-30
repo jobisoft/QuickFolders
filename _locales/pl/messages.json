@@ -1100,7 +1100,7 @@
     "message": "Nowy Folder"
   },
   "qf.prompt.pasteFolders": {
-    "message": "Spowoduje to usunięcie wszystkich zakładek QuickFolders i podmieni je z tymi zawartymi w schowku.\\nZnaleziono w schowku {0} wpisów.\\nCzy na pewno?"
+    "message": "Spowoduje to usunięcie wszystkich zakładek QuickFolders i podmieni je z tymi zawartymi w schowku.\nZnaleziono w schowku {0} wpisów.\nCzy na pewno?"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "Zachować wyświetlone zakładki?"
@@ -1109,10 +1109,10 @@
     "message": "Usunąć tę pozycję?"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "Nie można znaleźć wiadomości. Być może została przeniesiona w inne miejsce.\\n{1}\\n\\nCzy chcesz jej poszukać?"
+    "message": "Nie można znaleźć wiadomości. Być może została przeniesiona w inne miejsce.\n{1}\n\nCzy chcesz jej poszukać?"
   },
   "qf.prompt.restoreFolders": {
-    "message": "Spowoduje to usunięcie wszystkich kart QuickFolders i zastąpienie elementami z pliku.\\n{0} wpisy zostały przeczytane.\\nCzy zamienić karty?"
+    "message": "Spowoduje to usunięcie wszystkich kart QuickFolders i zastąpienie elementami z pliku.\n{0} wpisy zostały przeczytane.\nCzy zamienić karty?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "Przełączyć do strony licencji?"
@@ -1523,7 +1523,7 @@
     "message": ": Ta zakładka odnosi się do niewłaściwego folderu:"
   },
   "qfTidyDeadFolders": {
-    "message": "Spowoduje to usunięcie kart, które nie mają przypisanych właściwych folderów.\\nDzieje się tak czasami, jeśli folder zostanie usunięty lub przeniesiony bez powiadomienia QuickFolders."
+    "message": "Spowoduje to usunięcie kart, które nie mają przypisanych właściwych folderów.\nDzieje się tak czasami, jeśli folder zostanie usunięty lub przeniesiony bez powiadomienia QuickFolders."
   },
   "qfTreeIconsInvalidCount": {
     "message": "Brakujące ikony: {0}"

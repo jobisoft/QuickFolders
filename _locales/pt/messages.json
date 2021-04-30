@@ -1100,7 +1100,7 @@
     "message": "Nova pasta"
   },
   "qf.prompt.pasteFolders": {
-    "message": "Todas as abas do QuickFolders serão excluídas e substituídas pelos itens da área de transferência.\\nForam encontradas {0} entradas na área de transferência.\\nTem certeza?"
+    "message": "Todas as abas do QuickFolders serão excluídas e substituídas pelos itens da área de transferência.\nForam encontradas {0} entradas na área de transferência.\nTem certeza?"
   },
   "qf.prompt.pasteFolders.confirm": {
     "message": "Manter as abas exibidas?"
@@ -1109,10 +1109,10 @@
     "message": "Remover este item?"
   },
   "qf.prompt.readingList.searchMissingItem": {
-    "message": "Não foi possível encontrar o email. Ele pode ter sido movido para outro lugar nesse meio tempo.\\n{1}\\n\\nQuer procurá-lo?"
+    "message": "Não foi possível encontrar o email. Ele pode ter sido movido para outro lugar nesse meio tempo.\n{1}\n\nQuer procurá-lo?"
   },
   "qf.prompt.restoreFolders": {
-    "message": "Isso excluirá todas as guias do QuickFolders e substituirá os itens do arquivo.\\n{0} as entradas foram lidas.\\nSubstituir guias?"
+    "message": "Isso excluirá todas as guias do QuickFolders e substituirá os itens do arquivo.\n{0} as entradas foram lidas.\nSubstituir guias?"
   },
   "qf.prompt.switchDomainLicense": {
     "message": "Mudar para licença de domínio?"
@@ -1523,7 +1523,7 @@
     "message": ": Esta é uma aba que aponta para uma pasta inválida:"
   },
   "qfTidyDeadFolders": {
-    "message": "Isto irá remover as abas que não têm pastas válidas atribuídas.\\nÀs vezes acontece quando uma pasta é excluída ou movida sem que o QuickFolders seja notificado."
+    "message": "Isto irá remover as abas que não têm pastas válidas atribuídas.\nÀs vezes acontece quando uma pasta é excluída ou movida sem que o QuickFolders seja notificado."
   },
   "qfTreeIconsInvalidCount": {
     "message": "{0} ícones faltando"
