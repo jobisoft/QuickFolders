@@ -486,7 +486,13 @@ END LICENSE BLOCK */
     ## quickMove: character » is replaced with encoded unicode entry \u00BB in Create subfolder menu item (side effect 
        from converting localization to json in 5.5.1)
     ## In Thunderbird 89, the options menu item was not displayed in Add-ons Manager.
-
+  
+  5.6 QuickFolders Pro - WIP
+    ## [issue 150] New line characters "\n" displayed in version 5.5.2
+    ## licenser code migrated into background script
+       TO DO: rename hasPremiumLicense() ==> hasValidProLicense()
+              simplify Expired logic
+              
   
     
     -=-----------------=-    PLANNED

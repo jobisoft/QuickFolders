@@ -3,7 +3,7 @@
  * https://github.com/thundernest/addon-developer-support/wiki/Using-the-WindowListener-API-to-convert-a-Legacy-Overlay-WebExtension-into-a-MailExtension-for-Thunderbird-78
  */
 
-import * as util from "./scripts/qf-util.mjs";
+import * as util from "./scripts/qf-util.mjs.js";
 
 async function main() {
 
@@ -98,9 +98,9 @@ async function main() {
   * an object inside the global window. The name of that object can be specified via
   * the parameter of startListening(). This object also contains an extension member.
   */
-
-
   messenger.WindowListener.startListening();
+  
+  // test encryption
 }
 
 main();

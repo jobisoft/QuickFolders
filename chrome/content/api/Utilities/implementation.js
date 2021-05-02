@@ -39,7 +39,7 @@ var Utilities = class extends ExtensionCommon.ExtensionAPI {
         },
 
         LicenseIsProUser() {
-          return  win.QuickFolders.Util.hasPremiumLicense(false);
+          return  win.QuickFolders.Util.hasPremiumLicense();
         },
 
         LicensedDaysLeft() {

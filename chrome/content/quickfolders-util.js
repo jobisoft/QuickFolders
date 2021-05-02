@@ -14,7 +14,7 @@ if (!QuickFolders.Filter)	QuickFolders.Filter = {};
 	
 //if (!QuickFolders.Util)
 QuickFolders.Util = {
-	HARDCODED_CURRENTVERSION : "5.5.2", // will later be overriden call to AddonManager
+	HARDCODED_CURRENTVERSION : "5.6", // will later be overriden call to AddonManager
 	HARDCODED_EXTENSION_TOKEN : ".hc",
 	ADDON_ID: "quickfolders@curious.be",
 	ADDON_NAME: "QuickFolders",
@@ -312,7 +312,8 @@ QuickFolders.Util = {
 			}, 200);
 	} ,
   
-  hasPremiumLicense: function hasPremiumLicense(reset) {
+  // goal - take validation out and put it into an async function
+  hasPremiumLicense: function hasPremiumLicense(reset=false) {
 		const licenser = QuickFolders.Util.Licenser;
     // early exit for Licensed copies
     if (licenser.isValidated) 
@@ -326,6 +327,7 @@ QuickFolders.Util = {
       return false; // short circuit if no license key!
     if (!licenser.isValidated || reset) {
       licenser.wasValidityTested = false;
+      // this will need to be made async!
       licenser.validateLicense(licenseKey);
 			// store license key in this object
 			licenser.LicenseKey = licenseKey;
@@ -341,7 +343,7 @@ QuickFolders.Util = {
         util = QuickFolders.Util,
 				prefs = QuickFolders.Preferences,
 				maindoc = util.getMail3PaneWindow().document;
-    if (util.hasPremiumLicense(false))
+    if (util.hasPremiumLicense())
       return;
     util.logDebugOptional("premium", "popupProFeature(" + featureName + ", " + text + ")");
 		// is notification disabled?
@@ -1230,12 +1232,12 @@ QuickFolders.Util = {
 	// appends user=pro OR user=proRenew if user has a valid / expired license
 	makeUriPremium: function makeUriPremium(URL) {
 		const util = QuickFolders.Util,
-					isPremiumLicense = util.hasPremiumLicense(false) || util.Licenser.isExpired;
+					isPremiumLicense = util.hasPremiumLicense() || util.Licenser.isExpired;
 		try {
 			let uType = "";
 			if (util.Licenser.isExpired) 
 				uType = "proRenew"
-			else if (util.hasPremiumLicense(false))
+			else if (util.hasPremiumLicense())
 			  uType = "pro";
 			// make sure we can sanitize all pages for our premium users!
 			if (   uType
@@ -1663,7 +1665,14 @@ QuickFolders.Util.FirstRun = {
 				}
 			}
 			else { 
-        let isPremiumLicense = util.hasPremiumLicense(false) || util.Licenser.isExpired,
+        // TO DO:
+        // call validateLicense async and resolve promise (maybe)     
+        // QuickFolders.Licenser.validateLicense(key).then( 
+        //   function( validationResult) { 
+        //      .. do sync stuff
+        //   } 
+        // );
+        let isPremiumLicense = util.hasPremiumLicense() || util.Licenser.isExpired,
         		versionPage = util.makeUriPremium("https://quickfolders.org/version.html") + "#" + pureVersion;
         // UPDATE CASE 
         // this section does not get loaded if it's a fresh install.
